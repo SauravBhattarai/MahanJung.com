@@ -227,7 +227,7 @@ body {
 
 @media screen and (max-width:1024px) {
     .carousel-container {
-        width: 100%%;
+        width: 100%;
     }
 
     .carousel-slide img {
@@ -242,12 +242,8 @@ body {
     }
 
     .carousel-slide img {
-        width: 100%;
-        margin-top: 0;
-        margin-bottom: 0;
-        margin-left: auto;
-        margin-right: auto;
-        image-rendering: center;
+        margin: auto;
+        background-image: cover;
     }
 }
 
