@@ -164,9 +164,9 @@ nav {
 /*Carousel*/
 
 body {
-    background: #D3CCE3;   /*fallback for old browsers*/
-    background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #E9E4F0, #D3CCE3);  /*W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /*background: #D3CCE3;*/   /*fallback for old browsers*/
+    /*background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);*/  /* Chrome 10-25, Safari 5.1-6 */
+    /*background: linear-gradient(to right, #E9E4F0, #D3CCE3);*/  /*W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .carousel-container {
@@ -184,9 +184,8 @@ body {
 
 .carousel-slide img {
     width: 100%;
-    margin: auto;
+    object-fit: cover;
 }
-
 
 #previousBtn {
     position: absolute;
@@ -205,7 +204,6 @@ body {
     transform: scale(1.4);
     transition: 0.5s ease;
 }
-
 
 #nextBtn {
     position: absolute;
@@ -232,7 +230,7 @@ body {
 
     .carousel-slide img {
         width: 100%;
-        margin: 0;
+        object-fit: cover;
     }
 }
 
@@ -242,22 +240,10 @@ body {
     }
 
     .carousel-slide img {
-        margin: auto;
-        background-image: cover;
+        width: 100%;
+        object-fit: cover;
     }
 }
-
-
-#navigation-bar {
-    position: absolute;
-    width: 100%;
-    z-index: 999;
-}
-
-#carousel {
-    position: absolute;
-}
-
 
 input {
     display: none;
@@ -292,17 +278,137 @@ input {
 
 .dot-fill {
     background-color: white;
-    /*opcaity: 0.7;*/
+    opcaity: 0.7;
 }
 
+#navigation-bar {
+    position: absolute;
+    width: 100%;
+    z-index: 999;
+}
 
+#carousel {
+    position: absolute;
+}
 
+/**/
+/*Website Owner logo*/
+/**/
 
-
-
-
-
-.main {
-    top: 150vh;
+#client-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 5px;
+    font-size: 20px;
+    text-transform: uppercase;
+    top: 100vh;
+    width: 100%;
+    height: 13vh;
     position: relative;
+    background-color: #141414;
+    color: #fcfafa;
+}
+
+/**/
+/*Website Owner Info*/
+/**/
+
+#content {
+    display: grid;
+    grid-template-columns: repeat(2, 0.5fr);
+    border: 3px solid black;
+    width: 100%;
+    height: 100vh;
+    top: 113vh;
+    position: absolute;
+    background-color: #f8f8f8;
+}
+
+.client-img {
+    /*background-color: green;*/
+    display: flex;
+    align-items: center;
+}
+
+.client-img img{
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    object-fit: cover;
+}
+
+.client-info {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    color: #141414;
+    padding: 70px;
+    /*background-color: red;*/
+}
+
+.client-info h3 {
+    align-self: start;
+    justify-content: center;
+    font-size: 1.5em;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-decoration: underline;
+}
+
+.client-info p {
+    align-self: start;
+    font-size: 1.05em;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+@media screen and (max-width:1024px) {
+    #content {
+        grid-template-columns: repeat(2, 0.5fr);
+        height: 120vh;
+    }
+
+    .client-info {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    .client-info h3 {
+        font-size: 1.3em;
+    }
+
+    .client-info p {
+        font-size: 1.1em;
+    }
+
+    .client-img img{
+        object-fit: cover;
+    }
+
+}
+
+@media screen and (max-width:768px) {
+    #content {
+        grid-template-columns: 1fr;
+        height: 155vh;
+    }
+
+    .client-info {
+        padding-top: 10px;
+        font-size: 13px;
+        letter-spacing: 1.5px;
+    }
+
+    .client-info h3 {
+        font-size: 1.2em;
+    }
+    .client-info p {
+        font-size: 1em;
+    }
+
+    .client-img img{
+        object-fit: cover;
+    }
 }

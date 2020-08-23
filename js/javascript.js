@@ -58,8 +58,11 @@ nextBtn.addEventListener("click", function() {
     carouselSlide.style.transition = "transform 0.6s ease-in-out";
     counter++;
     carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-    dots[counter - 1].classList.toggle("dot-fill");
-    dots[counter - 2].classList.toggle("dot-fill");
+    if(counter <= 4) {
+        dots[counter - 1].classList.toggle("dot-fill");
+        dots[counter - 2].classList.toggle("dot-fill");
+    }
+
 });
 
 previousBtn.addEventListener("click", function() {
@@ -106,4 +109,4 @@ dots.forEach((dot, index) => {
 // Image Autoplay
 setInterval(function(){
     document.querySelector("#nextBtn").click();
-}, 6000);
+}, 5000);
