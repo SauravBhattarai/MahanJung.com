@@ -392,7 +392,7 @@ input {
 @media screen and (max-width:768px) {
     #content {
         grid-template-columns: 1fr;
-        height: 155vh;
+        height: 185vh;
     }
 
     .client-info {
