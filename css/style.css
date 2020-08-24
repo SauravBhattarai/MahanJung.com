@@ -12,6 +12,7 @@ nav {
     align-items: center;
     min-height: 11vh;
     background-color: rgba(211, 222, 218, 0);
+    z-index: 999;
     width: 100%;
     border-bottom: 1px solid rgba(211, 222, 218, 0.4);
 
@@ -163,17 +164,10 @@ nav {
 
 /*Carousel*/
 
-body {
-    /*background: #D3CCE3;*/   /*fallback for old browsers*/
-    /*background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);*/  /* Chrome 10-25, Safari 5.1-6 */
-    /*background: linear-gradient(to right, #E9E4F0, #D3CCE3);*/  /*W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
 .carousel-container {
     width: 100%;
     margin: auto;
     overflow: hidden;
-    posiion: relative;
 }
 
 .carousel-slide {
@@ -252,7 +246,6 @@ input {
 .dot-navigation {
     position: absolute;
     margin-top: -40px;
-    /*background-color: orange;*/
     width: 100%;
     display: flex;
     justify-content: center;
@@ -265,7 +258,6 @@ input {
     border-radius: 10px;
     cursor: pointer;
     transition: 1s;
-
 }
 
 .manualBtn:not(:last-child) {
@@ -281,16 +273,6 @@ input {
     opcaity: 0.7;
 }
 
-#navigation-bar {
-    position: absolute;
-    width: 100%;
-    z-index: 999;
-}
-
-#carousel {
-    position: absolute;
-}
-
 /**/
 /*Website Owner logo*/
 /**/
@@ -302,10 +284,8 @@ input {
     letter-spacing: 5px;
     font-size: 20px;
     text-transform: uppercase;
-    top: 100vh;
     width: 100%;
     height: 13vh;
-    position: relative;
     background-color: #141414;
     color: #fcfafa;
 }
@@ -314,43 +294,30 @@ input {
 /*Website Owner Info*/
 /**/
 
-#content {
+.content {
     display: grid;
-    grid-template-columns: repeat(2, 0.5fr);
-    border: 3px solid black;
-    width: 100%;
-    height: 100vh;
-    top: 113vh;
-    position: absolute;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    /*border: 3px solid black;*/
     background-color: #f8f8f8;
-}
-
-.client-img {
-    /*background-color: green;*/
-    display: flex;
-    align-items: center;
 }
 
 .client-img img{
     width: 100%;
     height: 100%;
-    padding: 40px;
+    padding: 20px;
     object-fit: cover;
 }
 
 .client-info {
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
+    color: #141414;
     display: flex;
     flex-direction: column;
-    color: #141414;
-    padding: 70px;
-    /*background-color: red;*/
+    padding: 50px;
 }
 
 .client-info h3 {
-    align-self: start;
-    justify-content: center;
     font-size: 1.5em;
     font-weight: 700;
     letter-spacing: 3px;
@@ -364,51 +331,36 @@ input {
     letter-spacing: 2px;
 }
 
-@media screen and (max-width:1024px) {
-    #content {
-        grid-template-columns: repeat(2, 0.5fr);
-        height: 120vh;
-    }
 
-    .client-info {
-        font-size: 12px;
-        letter-spacing: 1px;
-    }
+/**/
+/*Image Gallery*/
+/**/
 
-    .client-info h3 {
-        font-size: 1.3em;
-    }
-
-    .client-info p {
-        font-size: 1.1em;
-    }
-
-    .client-img img{
-        object-fit: cover;
-    }
-
+.gallery {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-rows: 350px 350px 350px 350px;
+    grid-gap: 15px;
+    padding: 15px;
+    border:3px solid red;
+    /*background-color: lightblue;*/
 }
 
-@media screen and (max-width:768px) {
-    #content {
-        grid-template-columns: 1fr;
-        height: 185vh;
-    }
+.gallery .image-box {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
 
-    .client-info {
-        padding-top: 10px;
-        font-size: 13px;
-        letter-spacing: 1.5px;
-    }
+.gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1s;
+}
 
-    .client-info h3 {
-        font-size: 1.2em;
-    }
-    .client-info p {
-        font-size: 1em;
-    }
-
-    .client-img img{
-        object-fit: cover;
-    }
+.gallery img:hover {
+    transform: scale(1.2);
 }
