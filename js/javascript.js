@@ -5,13 +5,12 @@ function navSlide () {
     var burger = document.querySelector(".burger");
     var nav = document.querySelector(".nav-links");
     var navLinks = document.querySelectorAll(".nav-links li");
-    var body = document.querySelector("body");
 
     burger.addEventListener("click", function () {
         // Toggle nav
         nav.classList.toggle("nav-active");
         // Slide the body while nav toggle
-        body.classList.toggle("body-slide-active");
+        burger.classList.toggle("body-slide-active");
 
         // Animate links
         navLinks.forEach((link, index) => {
@@ -30,6 +29,22 @@ function navSlide () {
 
 navSlide();
 
+// Navbar scroll effect
+
+function navBarColorChange() {
+
+    if(this.scrollY > this.innerHeight / 2) {
+        document.querySelector("nav").classList.add("nav-scroll");
+        document.querySelector(".content").classList.add("bg-change");
+    } else {
+        document.querySelector("nav").classList.remove("nav-scroll");
+        document.querySelector(".content").classList.add("bg-change");
+    }
+};
+
+window.addEventListener("scroll", navBarColorChange);
+
+
 //
 // Carousel Slider
 //
@@ -37,7 +52,7 @@ navSlide();
 var carouselSlide = document.querySelector(".carousel-slide");
 var carouselImages = document.querySelectorAll(".carousel-slide img");
 
-// Button
+// Buttons
 var prevBtn = document.querySelector("#prevBtn");
 var nextBtn = document.querySelector("#nextBtn");
 
@@ -53,6 +68,7 @@ dots[counter - 1].classList.add("dot-fill");
 
 // Button Listener
 
+// Next Button Listener
 nextBtn.addEventListener("click", function() {
     if(counter >= carouselImages.length - 1) return;
     carouselSlide.style.transition = "transform 0.6s ease-in-out";
@@ -65,6 +81,7 @@ nextBtn.addEventListener("click", function() {
 
 });
 
+// Previous Button Listener
 previousBtn.addEventListener("click", function() {
     if (counter <= 0) return;
     carouselSlide.style.transition = "transform 0.6s ease-in-out";

@@ -15,7 +15,13 @@ nav {
     z-index: 999;
     width: 100%;
     border-bottom: 1px solid rgba(211, 222, 218, 0.4);
+    transition: background 0.5s ease;
+}
 
+.nav-scroll {
+    background-color: black;
+    color: white;
+    min-height: 9vh;
 }
 
 .logo {
@@ -103,13 +109,14 @@ nav {
 
     .nav-links {
         position: absolute;
-        right: -40%;
+        right: 0%;
         height: 100vh;
         top: 0vh;
         rgba(211, 222, 218, 0.4);
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding-top: 50px;
         width: 40%;
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
@@ -297,7 +304,11 @@ input {
 .content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    /*border: 3px solid black;*/
+    /*background-color: #f8f8f8;*/
+    transition: background 0.5s ease;
+}
+
+.bg-change {
     background-color: #f8f8f8;
 }
 
@@ -343,7 +354,7 @@ input {
     grid-template-rows: 350px 350px 350px 350px;
     grid-gap: 15px;
     padding: 15px;
-    border:3px solid red;
+    /*border:3px solid red;*/
     /*background-color: lightblue;*/
 }
 
