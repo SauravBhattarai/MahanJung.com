@@ -5,12 +5,15 @@ function navSlide () {
     var burger = document.querySelector(".burger");
     var nav = document.querySelector(".nav-links");
     var navLinks = document.querySelectorAll(".nav-links li");
+    var slide = document.getElementById("slides");
 
     burger.addEventListener("click", function () {
         // Toggle nav
         nav.classList.toggle("nav-active");
+
         // Slide the body while nav toggle
         burger.classList.toggle("body-slide-active");
+        slide.classList.toggle("slides-active");
 
         // Animate links
         navLinks.forEach((link, index) => {
