@@ -37,11 +37,35 @@ navSlide();
 function navBarColorChange() {
 
     if(this.scrollY > this.innerHeight / 2) {
+        // Change navbar color
         document.querySelector("nav").classList.add("nav-scroll");
+        // Change content class bakground color
         document.querySelector(".content").classList.add("bg-change");
+        // Change navbar logo color
+        document.querySelector("nav .logo h4").classList.add("nav-items-whiten");
+        // Change burger background color
+        document.querySelector("nav .burger .line1").style.background = "#fcfafa";
+        document.querySelector("nav .burger .line2").style.background = "#fcfafa";
+        document.querySelector("nav .burger .line3").style.background = "#fcfafa";
+        // Change links color
+        document.querySelector("nav .nav-links .link1 a").style.color = "#fcfafa";
+        document.querySelector("nav .nav-links .link2 a").style.color = "#fcfafa";
+        document.querySelector("nav .nav-links .link3 a").style.color = "#fcfafa";
     } else {
         document.querySelector("nav").classList.remove("nav-scroll");
+
         document.querySelector(".content").classList.add("bg-change");
+
+        document.querySelector("nav .logo h4").classList.remove("nav-items-whiten");
+
+        document.querySelector("nav .burger .line1").style.background = "#141414";
+        document.querySelector("nav .burger .line2").style.background = "#141414";
+        document.querySelector("nav .burger .line3").style.background = "#141414";
+
+        document.querySelector("nav .nav-links .link1 a").style.color = "#141414";
+        document.querySelector("nav .nav-links .link2 a").style.color = "#141414";
+        document.querySelector("nav .nav-links .link3 a").style.color = "#141414";
+
     }
 };
 
@@ -108,6 +132,7 @@ carouselSlide.addEventListener("transitionend", function () {
     };
 });
 
+
 // Using Dots for Navigation in Carousel
 
 dots.forEach((dot, index) => {
@@ -129,4 +154,4 @@ dots.forEach((dot, index) => {
 // Image Autoplay
 setInterval(function(){
     document.querySelector("#nextBtn").click();
-}, 5000);
+}, 6000);

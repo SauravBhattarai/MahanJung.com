@@ -5,6 +5,10 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 nav {
     position: fixed;
     display: flex;
@@ -19,13 +23,18 @@ nav {
 }
 
 .nav-scroll {
-    background-color: black;
-    color: white;
+    background-color: #141414;
+    opacity: 0.95;
     min-height: 9vh;
 }
 
-.logo {
+.nav-items-whiten {
     color: #fcfafa;
+}
+
+.logo {
+    color:  #141414;
+    /*color: #fcfafa;*/
     text-transform: uppercase;
     letter-spacing: 5px;
     font-size: 20px;
@@ -44,7 +53,8 @@ nav {
 }
 
 .nav-links a{
-    color: #fcfafa;
+    color:  #141414;
+    /*color: #fcfafa;*/
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -73,6 +83,7 @@ nav {
     -webkit-transform: scale(1.2); /* Safari 3-8 */
     transform: scale(1.2);
     transition: 0.5s ease;
+    cursor: pointer;
 }
 
 .nav-links li:hover {
@@ -89,7 +100,8 @@ nav {
 .burger div {
     width: 25px;
     height: 2px;
-    background-color: #fcfafa;
+    background-color:  #141414;
+    /*background-color: #fcfafa;*/
     margin: 5px;
     transition: all 0.3s ease;
 
@@ -142,12 +154,13 @@ nav {
 
 #slides
 {
-    transform: transla/*t*/eX(0%);
+    /*transform: translateX(0%);*/
+    transition: all 0.6s ease;
 }
 
 .slides-active {
     transform: translateX(0%);
-    width: 75%;
+    width: 60%;
     transition: all 0.6s ease;
 }
 
