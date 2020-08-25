@@ -23,7 +23,7 @@ nav {
 }
 
 .nav-scroll {
-    background-color: #141414;
+    background-color: #1F1F1F;
     opacity: 0.95;
     min-height: 9vh;
 }
@@ -34,7 +34,6 @@ nav {
 
 .logo {
     color:  #141414;
-    /*color: #fcfafa;*/
     text-transform: uppercase;
     letter-spacing: 5px;
     font-size: 20px;
@@ -54,7 +53,6 @@ nav {
 
 .nav-links a{
     color:  #141414;
-    /*color: #fcfafa;*/
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -62,31 +60,37 @@ nav {
     font-weight: bold;
 }
 
+/*.highlight-selected {
+    background-color: rgba(175, 56, 56, 0.7);
+    border: 1px solid rgba(211, 222, 218, 0.2);
+    border-radius: 20px;
+}
+*/
 .nav-links .contacts {
     font-size: 20px;
 }
 
-.nav-links #youtube {
+#youtube {
     color: rgb(255, 0, 0);
 }
 
-.nav-links #facebook {
+#facebook {
     color: #385898;
 }
 
-.nav-links #instagram {
+#instagram {
     color: #C13584;
 }
 
 .logo:hover {
-    -ms-transform: scale(1.2); /* IE 9 */
-    -webkit-transform: scale(1.2); /* Safari 3-8 */
-    transform: scale(1.2);
-    transition: 0.5s ease;
+    /*-ms-transform: scale(1.2);*/
+    /*-webkit-transform: scale(1.2); */
+    /*transform: scale(1.2);*/
+    /*transition: 0.5s ease;*/
     cursor: pointer;
 }
 
-.nav-links li:hover {
+li:hover {
     -ms-transform: scale(1.2); /* IE 9 */
     -webkit-transform: scale(1.2); /* Safari 3-8 */
     transform: scale(1.2);
@@ -101,7 +105,6 @@ nav {
     width: 25px;
     height: 2px;
     background-color:  #141414;
-    /*background-color: #fcfafa;*/
     margin: 5px;
     transition: all 0.3s ease;
 
@@ -144,11 +147,6 @@ nav {
         cursor: pointer;
         transition: all 0.5s ease;
     }
-
-    /*.body-slide-active {
-        transform: translateX(-40%);
-        transition: all 0.6s ease;
-    }*/
 }
 
 
@@ -330,7 +328,6 @@ input {
 .content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    /*background-color: #f8f8f8;*/
     transition: background 0.5s ease;
 }
 
@@ -380,8 +377,7 @@ input {
     grid-template-rows: 350px 350px 350px 350px;
     grid-gap: 15px;
     padding: 15px;
-    /*border:3px solid red;*/
-    /*background-color: lightblue;*/
+    /*background-color: #1F1F1F;*/
 }
 
 .gallery .image-box {
@@ -400,4 +396,37 @@ input {
 
 .gallery img:hover {
     transform: scale(1.2);
+}
+
+/**/
+/*Footer*/
+/**/
+
+#footer {
+    background: #1F1F1F;
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#footer .footer-links {
+    display: flex;
+    padding: 30px 0;
+    font-size: 1.8rem;
+}
+
+#footer .footer-links li {
+    list-style: none;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+#footer h4 {
+    color: #fcfafa;
+    font-size: 12px;
+    font-weight: 200;
+    text-align: center;
 }

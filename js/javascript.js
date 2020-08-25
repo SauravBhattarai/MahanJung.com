@@ -32,6 +32,23 @@ function navSlide () {
 
 navSlide();
 
+
+// Change Navbar link background color when clicked
+
+// Change NavBar Links color when clicked
+
+// function changeLinkColor(){
+//     var clickLink = document.querySelectorAll(".nav-links .click a");
+
+//     clickLink.forEach((link) => {
+//         link.addEventListener("click", function () {
+//             link.classList.toggle("highlight-selected");
+//         });
+//     });
+// };
+
+// changeLinkColor();
+
 // Navbar scroll effect
 
 function navBarColorChange() {
