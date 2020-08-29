@@ -45,11 +45,11 @@
             <div class="form">
 
                 <div class="row">
-                     <div class="select-destination">
+                    <div class="select-destination">
                         <h4>Destination</h4>
                         <input list="destination" placeholder="Destination" name="Destination">
                             <datalist id="destination">
-                              <option value=".">
+                              <option value="None">
                               <option value="Everest Region">
                               <option value="Annapurna Region">
                               <option value="Eastern Nepal">
@@ -64,7 +64,7 @@
                         <h4>Activity</h4>
                         <input list="activity" placeholder="Activity" name="Activity">
                             <datalist id="activity">
-                              <option value=".">
+                              <option value="None">
                               <option value="Tour">
                               <option value="Trekking">
                               <option value="Climbing">
@@ -88,7 +88,7 @@
                 </div>
 
                 <div class="full-row">
-                     <div class="content">
+                    <div class="content">
                         <input type="text" name="email-address" autocomplete="off" required>
                         <label for="email-address" class="label-name">
                             <span class="content-name">Email Address</span>
@@ -105,14 +105,18 @@
                     </div>
 
                     <br>
+
+                    <textarea name="comment" placeholder="Enter Message"></textarea>
+
+                    <br>
                     <br>
 
-                    <textarea rows="8" cols="62" name="comment" placeholder="Enter Message"></textarea>
+                    <div class="send-btn">
+                        <button>Send Message</button>
+                    </div>
                 </div>
 
-                <div class="send-message">
-                    <button>Send Message</button>
-                </div>
+
             </div>
 
 

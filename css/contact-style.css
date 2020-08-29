@@ -83,10 +83,6 @@ nav {
 }
 
 .logo:hover {
-    /*-ms-transform: scale(1.2);*/
-    /*-webkit-transform: scale(1.2); */
-    /*transform: scale(1.2);*/
-    /*transition: 0.5s ease;*/
     cursor: pointer;
 }
 
@@ -210,23 +206,21 @@ body {
 .main-part {
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    /*grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));*/
+    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
     grid-column-gap: 40px;
-    /*grid-template-rows: 550px;*/
+    grid-row-gap: 30px;
     grid-template-rows: 95vh;
 
 }
 
-.main-part .picture {
+/*.main-part .picture {
     background-color: #9FDEE9;
 }
-
+*/
 .main-part .picture h3 {
     z-index: 10;
     position: absolute;
-    left: 144px;
-    top: 40px;
+    margin: 40px 0 0 23vh;
     font-style: normal;
     font-weight: 600;
     font-size: 34px;
@@ -235,7 +229,20 @@ body {
     color: #FFFFFF;
     border: 3px solid rgba(167, 223, 234, 0.04);
     text-shadow: -6px 5px 4px rgba(0, 0, 0, 0.2);
+}
 
+@media screen and (max-width:1024px) {
+    .main-part .picture h3 {
+        margin: 40px 0 0 14vh;
+        font-size: 2em;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .main-part .picture h3 {
+        margin: 40px 0 0 22vh;
+        font-size: 1.6em;
+    }
 }
 
 .main-part .picture img {
@@ -256,7 +263,10 @@ body {
 .form .row {
     display: flex;
     justify-content: space-around;
-    margin: 20px ;
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+    /*margin: 10px;*/
 }
 
 .form h4 {
@@ -274,16 +284,16 @@ body {
     padding: 12px 12px;
     border-radius: 4px;
     border: none;
-    color: #9FDEE9;
 }
 
 .form .full-row {
-    margin: 20px 0 20px 66px;
+    width: 80%;
+    margin: auto;
 }
 
 .form .full-row .content{
     position: relative;
-    width: 89%;
+    width: 100%;
     height: 50px;
     overflow: hidden;
 }
@@ -296,6 +306,7 @@ body {
     padding-top: 20px;
     border: none;
     outline: none;
+    font-size: 16px;
 }
 
 .form .full-row .content label {
@@ -341,23 +352,18 @@ body {
 }
 
 .full-row textarea {
+    width: 100%;
+    height: 160px;
     resize: none;
     border-radius: 4px;
     outline: none;
-    padding: 2px;
+    padding: 3px;
+    font-size: 16px;
 }
 
-
-.form .send-message {
-    /*background-color: black;*/
-    height: 8%;
-    display: flex;
-    justify-content: center;
-}
-
-.form .send-message button {
-    width: 40%;
-    height: 100%;
+.form .full-row .send-btn button {
+    width: 100%;
+    height: 40px;
     background-color: #539DF4;
     color: white;
     outline: none;
@@ -369,6 +375,11 @@ body {
     cursor: pointer;
 }
 
+@media screen and (max-width:1024px) {
+    .full-row textarea {
+        height: 130px;
+    }
+}
 
 
 
