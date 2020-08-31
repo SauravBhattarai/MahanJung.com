@@ -172,3 +172,17 @@ dots.forEach((dot, index) => {
 setInterval(function(){
     document.querySelector("#nextBtn").click();
 }, 6000);
+
+
+// 
+// window redirect
+// 
+
+// when clicked on logo
+var logo = document.querySelector(".logo");
+
+logo.addEventListener("click", function() {
+    window.location.href = "index.html";
+});
+
+

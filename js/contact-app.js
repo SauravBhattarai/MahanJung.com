@@ -33,24 +33,6 @@ function navSlide () {
 navSlide();
 
 
-// Change Navbar link background color when clicked
-
-// Change NavBar Links color when clicked
-
-// function changeLinkColor(){
-//     var clickLink = document.querySelectorAll(".nav-links .click a");
-
-//     clickLink.forEach((link) => {
-//         link.addEventListener("click", function () {
-//             link.classList.toggle("highlight-selected");
-//         });
-//     });
-// };
-
-// changeLinkColor();
-
-
-
 // Navbar scroll effect
 
 function navBarColorChange() {
@@ -58,9 +40,6 @@ function navBarColorChange() {
     if(this.scrollY > this.innerHeight / 9) {
         // Change navbar color
         document.querySelector("nav").classList.add("nav-scroll");
-
-        // Change content class bakground color
-        // document.querySelector(".content").classList.add("bg-change");
 
         // Change navbar logo color
         document.querySelector("nav .logo h4").classList.add("nav-items-whiten");
@@ -72,12 +51,10 @@ function navBarColorChange() {
 
         // Change links color
         document.querySelector("nav .nav-links .link1 a").style.color = "#fcfafa";
-        document.querySelector("nav .nav-links .link2 a").style.color = "#fcfafa";
+        document.querySelector("nav .nav-links .link2 a").style.color = "#ff0000";
         document.querySelector("nav .nav-links .link3 a").style.color = "#fcfafa";
     } else {
         document.querySelector("nav").classList.remove("nav-scroll");
-
-        // document.querySelector(".content").classList.add("bg-change");
 
         document.querySelector("nav .logo h4").classList.remove("nav-items-whiten");
 
@@ -86,10 +63,47 @@ function navBarColorChange() {
         document.querySelector("nav .burger .line3").style.background = "#141414";
 
         document.querySelector("nav .nav-links .link1 a").style.color = "#141414";
-        document.querySelector("nav .nav-links .link2 a").style.color = "#141414";
+        document.querySelector("nav .nav-links .link2 a").style.color = "#ff0000";
         document.querySelector("nav .nav-links .link3 a").style.color = "#141414";
 
     }
 };
 
 window.addEventListener("scroll", navBarColorChange);
+
+
+// 
+// window redirect
+// 
+
+// when clicked on logo
+
+var logo = document.querySelector(".logo");
+
+logo.addEventListener("click", function() {
+    window.location.href = "index.html";
+});
+
+
+
+
+// when clicked on gallery
+
+// var gallery = document.querySelector(".link3");
+
+// function callhome(){
+//     window.location.href = "index.html";
+// };
+
+// function scrolldown() {
+//     window.scroll({
+//         top: 100,
+//         behavior: 'smooth'
+//     });
+// };
+
+// gallery.addEventListener("click", () => {
+//     scrolldown();
+// });
+
+

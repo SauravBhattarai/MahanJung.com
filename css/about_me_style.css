@@ -1,0 +1,359 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+nav {
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 9vh;
+    background-color: rgba(211, 222, 218, 0);
+    z-index: 999;
+    width: 100%;
+    border-bottom: 1px solid rgba(211, 222, 218, 0.4);
+    transition: background 0.5s ease;
+}
+
+.nav-scroll {
+    background-color: #1F1F1F;
+    opacity: 0.95;
+    min-height: 9vh;
+}
+
+.nav-items-whiten {
+    color: #fcfafa;
+}
+
+.logo {
+    color:  #141414;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+    font-weight: bolder;
+    /*cursor: pointer;*/
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.nav-links li {
+    list-style-type: none;
+}
+
+.nav-links a{
+    color:  #141414;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.link1 a {
+    color: #ff0000;
+    font-size: 1.05em;
+}
+
+/*.highlight-selected {
+    background-color: rgba(175, 56, 56, 0.7);
+    border: 1px solid rgba(211, 222, 218, 0.2);
+    border-radius: 20px;
+}
+*/
+.nav-links .contacts {
+    font-size: 20px;
+}
+
+#youtube {
+    color: rgb(255, 0, 0);
+}
+
+#facebook {
+    color: #385898;
+}
+
+#instagram {
+    color: #C13584;
+}
+
+.logo:hover {
+    cursor: pointer;
+}
+
+.nav-links li:hover {
+    -ms-transform: scale(1.2); /* IE 9 */
+    -webkit-transform: scale(1.2); /* Safari 3-8 */
+    transform: scale(1.2);
+    transition: 0.5s ease;
+}
+
+.burger {
+    display: none;
+}
+
+.burger div {
+    width: 25px;
+    height: 2px;
+    background-color:  #141414;
+    margin: 5px;
+    transition: all 0.3s ease;
+
+}
+
+@media screen and (max-width:1024px) {
+    .nav-links {
+        width: 53%;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .nav-links {
+        position: absolute;
+        right: 0%;
+        height: 100vh;
+        top: 0vh;
+        color: rgba(211, 222, 218, 0.4);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 50px;
+        width: 40%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        background-color: #40c3ff;
+    }
+
+    .nav-links li{
+        opacity: 0;
+    }
+
+    .burger {
+        display: block;
+        cursor: pointer;
+        transition: all 0.5s ease;
+    }
+}
+
+
+#slides
+{
+    transition: all 0.6s ease;
+}
+
+.slides-active {
+    transform: translateX(0%);
+    width: 60%;
+    transition: all 0.6s ease;
+}
+
+
+.nav-active {
+    transform: translateX(0%);
+    transition: 0.6s;
+}
+
+@keyframes navLinkFadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -5px);
+}
+
+
+/* Body */
+
+body {
+    background-color: #F6F6F6;
+}
+
+/*  */
+/* Resume */
+/*  */
+
+.main {
+    position: absolute;
+    top: 9vh;
+}
+
+.resume {
+    display: grid;
+    width: 95%;
+    margin: auto;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    grid-column-gap: 40px;
+    grid-template-rows: 91vh;
+}
+
+.resume .picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.resume .info {
+    padding: 20px;
+}
+
+.resume .info h2 {
+    font-weight: 700;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.resume .info ul{
+    font-weight: 500;
+    font-size: 1em;
+    line-height: 220%;
+    list-style: square;
+}
+/*  */
+/* Himalayan Invasion*/
+/*  */
+
+.himalayan-invasion {
+    margin: 20px 0;
+    height: 90vh;
+    background-image: url("star-mountain.jpg");
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+
+.himalayan-invasion {
+    padding: 65px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.himalayan-invasion h2 {
+    font-weight: 900;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+}
+
+.himalayan-invasion p {
+    align-self: flex-end;
+    font-weight: 500;
+    font-size: 1.1em;
+    letter-spacing: 0.14em;
+    line-height: 2em;
+    align-items: center;
+    text-align: justify;
+}
+
+
+/*  */
+/* Article and News Section */
+/*  */
+
+.article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.article h2 {
+    font-weight: 700;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #000000;
+    text-decoration-line: underline;
+}
+
+.article ul{
+    font-weight: 500;
+    font-size: 1em;
+    line-height: 200%;
+    list-style: square;
+    text-decoration: none;
+}
+
+
+/**/
+/*Footer*/
+/**/
+
+#footer {
+    margin-top: 40px;
+    background: #1F1F1F;
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#footer .footer-links {
+    display: flex;
+    padding: 15px 0;
+    font-size: 1.8rem;
+}
+
+#footer .footer-links li {
+    list-style: none;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+#footer h4 {
+    color: #fcfafa;
+    font-size: 12px;
+    font-weight: 200;
+    text-align: center;
+}
+
+#footer .phone-number {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+#footer .footer-links li:hover {
+    -ms-transform: scale(1.2); /* IE 9 */
+    -webkit-transform: scale(1.2); /* Safari 3-8 */
+    transform: scale(1.2);
+    transition: 0.5s ease;
+}
