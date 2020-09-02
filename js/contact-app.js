@@ -85,25 +85,23 @@ logo.addEventListener("click", function() {
 });
 
 
+// 
+// Contact Form
+// 
+
+// var sendBtn = document.querySelector(".send-btn");
+
+// sendBtn.addEventListener("click", function () {
+//     var destination = document.querySelector("#destination").value;
+
+//     var activity = document.querySelector("#activity").value;
+
+//     var Numberofdays = document.querySelector("#NumberOfDays").value;
 
 
-// when clicked on gallery
+//     var email = document.querySelector("#email").value;
 
-// var gallery = document.querySelector(".link3");
+//     var contact = document.querySelector("#contact").value;
 
-// function callhome(){
-//     window.location.href = "index.html";
-// };
-
-// function scrolldown() {
-//     window.scroll({
-//         top: 100,
-//         behavior: 'smooth'
-//     });
-// };
-
-// gallery.addEventListener("click", () => {
-//     scrolldown();
+//     var message = document.querySelector("#message").value;
 // });
-
-

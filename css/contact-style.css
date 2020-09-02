@@ -18,7 +18,7 @@ nav {
     background-color: rgba(211, 222, 218, 0);
     z-index: 999;
     width: 100%;
-    border-bottom: 1px solid rgba(211, 222, 218, 0.4);
+    /* border-bottom: 1px solid rgba(211, 222, 218, 0.4); */
     transition: background 0.5s ease;
 }
 
@@ -254,21 +254,20 @@ body {
     filter: drop-shadow(-6px 5px 7px rgba(0, 0, 0, 0.25));
 }
 
-.form {
+form {
     background-color: #928787;
     margin: 0 40px;
     filter: drop-shadow(-6px 5px 7px rgba(0, 0, 0, 0.25));
 }
 
-.form .row {
+form .row {
     display: flex;
-    justify-content: space-around;
-    width: 90%;
-    margin: auto;
-    margin-top: 10px;
+    justify-content: space-between;
+    width: 80%;
+    margin: 15px auto;
 }
 
-.form h4 {
+form h4 {
     font-style: normal;
     font-weight: 400;
     letter-spacing: 0.07em;
@@ -278,26 +277,47 @@ body {
     padding: 10px 0;
 }
 
-.form .row input {
+form label {
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    mix-blend-mode: normal;
+    padding: 10px 0;
+}
+
+form .row select {
     box-sizing: border-box;
     padding: 12px 12px;
     border-radius: 4px;
     border: none;
+    outline-color: #9FDEE9;
+    /* width: 100%; */
 }
 
-.form .full-row {
+form .row input {
+    box-sizing: border-box;
+    padding: 12px 12px;
+    border-radius: 4px;
+    border: none;
+    outline-color: #9FDEE9;
+    width: 100%;
+}
+
+form .full-row {
     width: 80%;
     margin: 10px auto;
 }
 
-.form .full-row .content{
+form .full-row .content{
     position: relative;
     width: 100%;
     height: 50px;
     overflow: hidden;
 }
 
-.form .full-row .content input{
+form .full-row .content input{
     width: 100%;
     height: 100%;
     background: #928787;
@@ -308,7 +328,7 @@ body {
     font-size: 16px;
 }
 
-.form .full-row .content label {
+form .full-row .content label {
     position: absolute;
     bottom: 0;
     left: 0%;
@@ -321,7 +341,7 @@ body {
     text-transform: uppercase;
 }
 
-.form .full-row .content label::after {
+form .full-row .content label::after {
     content: "";
     position: absolute;
     left: 0;
@@ -333,20 +353,20 @@ body {
     transition: transform 0.3s ease;
 }
 
-.form .full-row .content .content-name {
+form .full-row .content .content-name {
     position: absolute;
     bottom: 5px;
     left: 0;
     transition: all 0.3s ease;
 }
 
-.form .full-row .content input:focus + .label-name .content-name,
-.form .full-row .content input:valid + .label-name .content-name {
+form .full-row .content input:focus + .label-name .content-name,
+form .full-row .content input:valid + .label-name .content-name {
     transform: translateY(-130%);
 }
 
-.form .full-row .content input:focus + .label-name::after ,
-.form .full-row .content input:valid + .label-name::after {
+form .full-row .content input:focus + .label-name::after ,
+form .full-row .content input:valid + .label-name::after {
     transform: translateX(0%);
 }
 
@@ -360,7 +380,7 @@ body {
     font-size: 16px;
 }
 
-.form .full-row .send-btn button {
+form .full-row .send-btn button {
     width: 100%;
     height: 40px;
     background-color: #539DF4;
@@ -389,7 +409,7 @@ body {
 #footer {
     margin-top: 40px;
     background: #1F1F1F;
-    width: 100%;
+    width: 100vw;
     height: 30vh;
     display: flex;
     justify-content: center;

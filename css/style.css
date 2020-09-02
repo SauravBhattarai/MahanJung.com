@@ -60,12 +60,6 @@ nav {
     font-weight: bold;
 }
 
-/*.highlight-selected {
-    background-color: rgba(175, 56, 56, 0.7);
-    border: 1px solid rgba(211, 222, 218, 0.2);
-    border-radius: 20px;
-}
-*/
 .nav-links .contacts {
     font-size: 20px;
 }
@@ -83,10 +77,10 @@ nav {
 }
 
 .logo:hover {
-    /*-ms-transform: scale(1.2);*/
-    /*-webkit-transform: scale(1.2); */
-    /*transform: scale(1.2);*/
-    /*transition: 0.5s ease;*/
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    transition: 0.5s ease;
     cursor: pointer;
 }
 
