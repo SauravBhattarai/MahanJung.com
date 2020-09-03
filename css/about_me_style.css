@@ -212,7 +212,7 @@ body {
     display: grid;
     width: 95%;
     margin: auto;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     grid-column-gap: 40px;
     grid-template-rows: 91vh;
 }

@@ -84,24 +84,3 @@ logo.addEventListener("click", function() {
     window.location.href = "index.html";
 });
 
-
-// 
-// Contact Form
-// 
-
-// var sendBtn = document.querySelector(".send-btn");
-
-// sendBtn.addEventListener("click", function () {
-//     var destination = document.querySelector("#destination").value;
-
-//     var activity = document.querySelector("#activity").value;
-
-//     var Numberofdays = document.querySelector("#NumberOfDays").value;
-
-
-//     var email = document.querySelector("#email").value;
-
-//     var contact = document.querySelector("#contact").value;
-
-//     var message = document.querySelector("#message").value;
-// });

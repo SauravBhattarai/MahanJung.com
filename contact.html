@@ -40,18 +40,18 @@
       </nav>
     </section>
 
-    <div id="slides">
+    <div id="slides" class="slides">
 
         <div class="main-part">
 
-            <div class=picture>
+            <div class="picture">
                 <h3>Explore with me</h3>
                 <img src="client-files/contact-page/ExploreWithMe.jpg">
             </div>
 
             <form action="https://formspree.io/mdowrjqe" method="POST">
 
-                <div class="row">
+                <div class="row-first">
                     <div class="select-destination">
                         <label for="destination">Destination</label>
                         <select name="Destination" id="destination">
@@ -83,12 +83,12 @@
 
                 <div class="row">
                      <div class="days-no">
-                        <label for="NumberOfDays">No of Days</label>
+                        <label for="NumberOfDays">No. Days</label>
                         <input id="NumberOfDays" type="number" placeholder="Days" name="Number Of Days" min="1" max="100">
                     </div>
 
                     <div class="pax-no">
-                        <label for="NumberOfPAX">No of PAX</label>
+                        <label for="NumberOfPAX">No. PAX</label>
                         <input id="NumberOfPAX" type="number" placeholder="PAX" name="Number Of PAX" min="1" max="100">
                     </div>
                 </div>
@@ -121,9 +121,7 @@
                         <button id="email-submit-btn" type="submit" value="send">Send Message</button>
                     </div>
                 </div>
-
             </form>
-
         </div>
 
         <section id="footer">
